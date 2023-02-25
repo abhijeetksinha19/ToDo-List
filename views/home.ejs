@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+
+                <!--FONTAWESOME LINK-->
+        <script src="https://kit.fontawesome.com/917ac5a590.js" crossorigin="anonymous"></script>
+
+              <!--Our CSS SHOULD BE BELOW-->
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+
+    <body>
+
+              <!--HEADING-->
+        <h1 id="heading">
+            <!--FOR USING FONTAWESOME-->
+            <i class="fas fa-pencil-square-o"></i>
+             TODO App</h1>
+
+             <!--MAIN DIV-->
+        <div id="todo-container">
+            <ul>
+                <% for (let i of ToDo_List){ %> 
+                    <li class="todo">
+                           <!--TODO DETAILS-->
+                        <div class="details">
+                            <p><%= i.description %></p>
+                            <p><%= i.category %></p>
+                            <p><%=i.dueDate%></p>
+                        </div>
+                           <!--DELETE BUTTON-->
+                        <div class="delete-button">
+                            <a href="/delete-todo/?id=<%= i._id%>">
+                                <i class="fas fa-close"></i>
+                            </a>
+                        </div>   
+                    </li>
+                <%} %>
+            </ul>
+        </div>
+
+                        <!--FORM-->
+        <form id="new-todo-form" action="/create-todo" method="POST">
+                        <!--DESCRIPTION-->
+            <input type="text" name="description" placeholder="What do you need to do?" required>
+                        <!--CATEGORY-->
+            <select name="category" id="category" >
+                <option value=" " selected >Choose a Category</option>
+                <option value="Personal" class="personal">Personal</option>
+                <option value="Birthday/Aniversary" class="bday">Choose a Category</option>
+                <option value="School" class="school" >Choose a Category</option>
+                <option value="Cleaning" class=" cleaning">Choose a Category</option>
+                <option value="Others" class="others">Choose a Category</option>
+            </select>
+                        <!--DUE DATE-->
+            <input type="date" name="dueDate" placeholder="Add a due date in dd/mm/yy" required>
+
+                          <!--BUTTONS-->
+            <button id="btn1" type="submit"> Add Task </button>
+
+        </form>
+
+                      <!--JAVASCRIPT FILE-->
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#heading{
+    text-align: center;
+    margin-top: 25px;
+    color: rgb(200, 219, 29);
+}
+
+#todo-container ul{
+    padding: 0;
+    list-style: none;
+}
+
+.todo{
+    padding: 3px 10px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px 1px lightcyan;
+    color: whitesmoke;
+    display: flex;
+}
+
+.todo .details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.todo .delete-button{
+    width: 10%;
+    padding: 3px;
+    text-align: center;
+    margin: 5px;
+}
+
+.todo .delete-button a{
+    color: red;
+    background-color: black;
+}
+
+.todo p{
+    margin: 5px 0;
+}
+
+#category{
+    padding: 2px;
+    text-align: left;
+    margin: auto;
+}
+
+.personal{
+    margin: auto;
+    background-color: blueviolet;
+    border-radius: 0.5;
+    border-color: coral;
+    box-shadow: 0.2 black;
+}
+
+.bday{
+    margin: auto;
+    background-color: blue;
+    border-radius: 0.5;
+    border-color: brown;
+    box-shadow: 0.2 black;
+}
+
+.school{
+    margin: auto;
+    background-color: navy;
+    border-radius: 0.5;
+    border-color: chocolate;
+    box-shadow: 0.2 black;
+}
+
+.cleaning{
+    margin: auto;
+    background-color: skyblue;
+    border-radius: 0.5;
+    border-color: burlywood;
+    box-shadow: 0.2 black;
+}
+
+.others{
+    margin: auto;
+    background-color: aqua;
+    border-radius: 0.5;
+    border-color: crimson;
+    box-shadow: 0.2 black;
+}
+
+#btn1{
+    padding: auto;
+    color: khaki;
+    text-align: center;
+    text-decoration-color: darkslategrey;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
